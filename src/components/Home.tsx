@@ -1,6 +1,8 @@
 import { memo, VFC } from "react";
-import { Box, Image, Flex, Heading } from '@chakra-ui/react'
-import { Fa500Px, FaBluetooth, FaEllo } from 'react-icons/fa'
+import { Box, Image, Flex, Heading, Link } from '@chakra-ui/react'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import { SiInstagram } from 'react-icons/si'
+import { FaFacebook } from 'react-icons/fa'
 
 export const Home: VFC = memo(() => {
   return (
@@ -43,10 +45,16 @@ export const Home: VFC = memo(() => {
 
           <Box ml={10}>
             <Heading as="h3">SNS</Heading>
-            <Flex>
-              <Fa500Px />
-              <FaBluetooth />
-              <FaEllo />
+            <Flex justifyContent="space-between">
+              <Link href="https://twitter.com/twitterjp?lang=ja" isExternal>
+                <AiFillTwitterCircle />
+              </Link>
+              <Link href="https://www.instagram.com/?hl=ja" isExternal>
+                <SiInstagram />
+              </Link>
+              <Link href="https://ja-jp.facebook.com/facebook/" isExternal>
+                <FaFacebook />
+              </Link>
             </Flex>
           </Box>
 
