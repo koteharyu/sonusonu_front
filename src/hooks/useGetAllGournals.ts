@@ -5,11 +5,10 @@ export const useGetAllGournals = () => {
 
   type Gournal = {
     id: number
-    title: number
-    content: number
-    image: {
-      url: string
-    }
+    title: string
+    content: string
+    image_url: string
+    created_at: Date
   }
   const [gournals, setGournals] = useState<Array<Gournal>>([])
 

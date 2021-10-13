@@ -1,6 +1,7 @@
-import axios from "axios";
-import { memo, useEffect, useState, VFC } from "react";
+import { memo, useEffect, VFC } from "react";
+import { Stack } from '@chakra-ui/react'
 import { useGetAllGournals } from "../hooks/useGetAllGournals";
+import { GournalCard } from "./templates/GournalCard";
 
 
 export const Gournal: VFC = memo(() => {
@@ -13,9 +14,11 @@ export const Gournal: VFC = memo(() => {
 
   return (
     <>
-      {gournals?.map((gournal) => (
-        <p key={gournal.id}>{gournal.id}</p>
-      ))}
+      <Stack spacing={6}>
+        {gournals?.map((gournal) => (
+          <GournalCard title={gournal.title} imageUrl={gournal.image_url} content={gournal.content} createdAt={gournal.created_at} />
+        ))}
+      </Stack>
     </>
   )
 })
