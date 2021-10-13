@@ -10,21 +10,20 @@ export const NewGournal: VFC = memo(() => {
   const [newTitle, setNewTitle] = useState("")
   const [newContent, setNewContent] = useState("")
   const [image, setImage] = useState<File | null>(null)
+  const [authorImage, setAuthorImage] = useState<File | null>(null)
 
   const handleTitle = (e: ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)
   const handleContent = (e: any) => setNewContent(e.target.value)
   const selectImage = (e: any) => setImage(e.target.files[0])
+  const selectAuthorImage = (e: any) => setAuthorImage(e.target.files[0])
 
   const createFormData = () => {
     const formData = new FormData()
-    if (image) {
-      formData.append('gournal[title]', newTitle)
-      formData.append('gournal[content]', newContent)
-      formData.append('gournal[image]', image)
-    } else {
-      formData.append('gournal[title]', newTitle)
-      formData.append('gournal[content]', newContent)
-    }
+    if (!image || !authorImage) return
+    formData.append('gournal[title]', newTitle)
+    formData.append('gournal[content]', newContent)
+    formData.append('gournal[image]', image)
+    formData.append('gournal[author_image]', authorImage)
     return formData
   }
 
@@ -47,6 +46,9 @@ export const NewGournal: VFC = memo(() => {
       </FormControl>
       <FormControl mt={3}>
         <Input type="file" onChange={selectImage} />
+      </FormControl>
+      <FormControl mt={3}>
+        <Input type="file" onChange={selectAuthorImage} />
       </FormControl>
       <FormControl mt={3}>
         <Button onClick={submitGournal}>Submit</Button>

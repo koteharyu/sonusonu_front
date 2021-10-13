@@ -14,13 +14,14 @@ type Props = {
   title: string
   content: string
   imageUrl: string
+  authorImageUrl:string
   createdAt: Date
 }
 
 export const GournalCard: VFC<Props> = memo((props) => {
 
 
-  const { title, content, imageUrl, createdAt } = props
+  const { title, content, imageUrl, authorImageUrl, createdAt } = props
 
   return (
     <Center py={6}>
@@ -45,7 +46,7 @@ export const GournalCard: VFC<Props> = memo((props) => {
         </Text>
       <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
         <Avatar
-          src={imageUrl}
+            src={authorImageUrl}
           alt={'Author'}
         />
         <Stack direction={'column'} spacing={0} fontSize={'sm'}>

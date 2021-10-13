@@ -8,6 +8,7 @@ export const useGetAllGournals = () => {
     title: string
     content: string
     image_url: string
+    author_image_url: string
     created_at: Date
   }
   const [gournals, setGournals] = useState<Array<Gournal>>([])

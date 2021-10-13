@@ -16,7 +16,7 @@ export const Gournal: VFC = memo(() => {
     <>
       <Stack spacing={6}>
         {gournals?.map((gournal) => (
-          <GournalCard title={gournal.title} imageUrl={gournal.image_url} content={gournal.content} createdAt={gournal.created_at} />
+          <GournalCard title={gournal.title} imageUrl={gournal.image_url} authorImageUrl={gournal.author_image_url} content={gournal.content} createdAt={gournal.created_at} />
         ))}
       </Stack>
     </>
