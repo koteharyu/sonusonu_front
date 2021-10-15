@@ -11,7 +11,7 @@ export const Home: VFC = memo(() => {
         <Image src={`${process.env.PUBLIC_URL}/TacoRIce.jpeg`} style={{ width: "100%" }} />
       </Box>
 
-      <Box>
+      <Box textAlign="center" my={10}>
         <Heading as="h2">HOME</Heading>
       </Box>
 

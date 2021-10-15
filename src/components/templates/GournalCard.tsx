@@ -38,7 +38,9 @@ export const GournalCard: VFC<Props> = memo((props) => {
           textTransform={'uppercase'}
           fontWeight={800}
           fontSize={'sm'}
-          letterSpacing={1.1}>
+          letterSpacing={1.1}
+          my={3}
+        >
           {title}
         </Text>
         <Text color={'gray.500'}>
