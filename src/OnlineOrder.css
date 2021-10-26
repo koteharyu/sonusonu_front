@@ -1,0 +1,46 @@
+.onlineOrderImage {
+  position: relative;
+}
+
+.onlineOrderImage .onlineOrderTitle {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+.onlineOrderImage .onlineOrderServices {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+/* .onlineOrderImage .uberEats {
+  margin-left: auto;
+}
+
+.ddFood {
+  margin-left: auto;
+}
+
+.demaekan {
+  margin-left: auto;
+}
+
+.foodPanda {
+  margin-left: auto;
+} */
