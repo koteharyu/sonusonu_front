@@ -37,6 +37,21 @@ export const Header: VFC = memo(() => {
               Journal
             </Link>
           </Box>
+          <Box pr={4}>
+            <Link onClick={onClickGournal}>
+              Order Online
+            </Link>
+          </Box>
+          <Box pr={4}>
+            <Link onClick={onClickGournal}>
+              Access
+            </Link>
+          </Box>
+          <Box pr={4}>
+            <Link onClick={onClickGournal}>
+              Contact
+            </Link>
+          </Box>
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>

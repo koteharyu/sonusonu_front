@@ -3,12 +3,17 @@ import { Box, Image, Flex, Heading, Link } from '@chakra-ui/react'
 import { AiFillTwitterCircle } from 'react-icons/ai'
 import { SiInstagram } from 'react-icons/si'
 import { FaFacebook } from 'react-icons/fa'
+import { Story } from "./templates/Story";
 
 export const Home: VFC = memo(() => {
   return (
     <>
       <Box>
         <Image src={`${process.env.PUBLIC_URL}/TacoRIce.jpeg`} style={{ width: "100%" }} />
+      </Box>
+
+      <Box>
+        <Story />
       </Box>
 
       <Box textAlign="center" my={10}>
