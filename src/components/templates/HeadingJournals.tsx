@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Wrap, WrapItem } from "@chakra-ui/react";
 import { memo, useEffect, VFC } from "react";
 import { HeadingJournalCard } from "../molecules/HeadingJournalCard";
 import { useGetAllGournals } from '../../hooks/useGetAllGournals'
@@ -13,11 +13,13 @@ export const HeadingJournals: VFC = memo(() => {
 
   return (
     <>
-      <Flex justifyContent="space-around">
+      <Wrap p={{ base: 4, md: 10 }} spacing="30px" justify="center">
         {gournals.map((journal) => (
-          <HeadingJournalCard key={journal.id} title={journal.title} imageUrl={journal.image_url} createdAt={journal.processed_created_at} />
+          <WrapItem key={journal.id}>
+            <HeadingJournalCard title={journal.title} imageUrl={journal.image_url} createdAt={journal.processed_created_at} />
+          </WrapItem>
         ))}
-      </Flex>
+      </Wrap>
     </>
   )
 })
