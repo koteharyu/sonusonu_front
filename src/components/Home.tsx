@@ -4,6 +4,7 @@ import { AiFillTwitterCircle } from 'react-icons/ai'
 import { SiInstagram } from 'react-icons/si'
 import { FaFacebook } from 'react-icons/fa'
 import { Story } from "./templates/Story";
+import { HeadingJournals } from "./templates/HeadingJournals";
 
 export const Home: VFC = memo(() => {
   return (
@@ -14,6 +15,10 @@ export const Home: VFC = memo(() => {
 
       <Box>
         <Story />
+      </Box>
+
+      <Box>
+        <HeadingJournals />
       </Box>
 
       <Box textAlign="center" my={10}>

@@ -10,6 +10,7 @@ export const useGetAllGournals = () => {
     image_url: string
     author_image_url: string
     created_at: Date
+    processed_created_at: Date
   }
   const [gournals, setGournals] = useState<Array<Gournal>>([])
 
@@ -21,5 +22,13 @@ export const useGetAllGournals = () => {
       .catch((e) => console.log(e))
   }
 
-  return { getAllGournal, gournals }
+  const getThreeJournals = () => {
+    axios.get<Array<Gournal>>('http://localhost:3001/api/v1/gournals/three_gournals')
+    .then((res) => {
+      setGournals(res.data)
+    })
+    .catch((e) => console.log(e))
+  }
+
+  return { getAllGournal,getThreeJournals, gournals }
 }

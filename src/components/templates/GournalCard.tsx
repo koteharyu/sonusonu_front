@@ -31,7 +31,9 @@ export const GournalCard: VFC<Props> = memo((props) => {
         boxShadow={'2xl'}
         rounded={'md'}
         p={6}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        _hover={{ opacity: ".7", cursor: "pointer"}}
+      >
         <Image src={imageUrl} layout={'fill'} />
         <Text
           color={'green.500'}
