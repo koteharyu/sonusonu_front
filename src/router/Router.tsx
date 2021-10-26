@@ -14,7 +14,7 @@ export const Router: VFC = memo(() => {
       <Route exact path="/menu">
         <Menu />
       </Route>
-      <Route path="/gournal" render={({ match: {url}}) => (
+      <Route path="/journals" render={({ match: {url}}) => (
         <Switch>
           {GournalRoutes.map((route) => (
             <Route key={route.path} exact={route.exact} path={`${url}${route.path}`}>

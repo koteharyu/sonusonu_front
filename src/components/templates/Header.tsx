@@ -12,7 +12,7 @@ export const Header: VFC = memo(() => {
 
   const onClickHome = () => history.push('/')
   const onClickMenu = () => history.push('/menu')
-  const onClickGournal = () => history.push('/gournal')
+  const onClickGournal = () => history.push('/journals')
 
 
   return (
@@ -34,7 +34,7 @@ export const Header: VFC = memo(() => {
           </Box>
           <Box pr={4}>
             <Link onClick={onClickGournal}>
-              Gournal
+              Journal
             </Link>
           </Box>
         </Flex>
