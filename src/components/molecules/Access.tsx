@@ -25,7 +25,7 @@ export const Access: VFC = memo(() => {
         </Box>
 
         <Box>
-          <Image src="BusinessHour.jpeg" boxSize="360px" objectFit="cover" borderRadius="5px" />
+          <Image src={`${process.env.PUBLIC_URL}/BusinessHour.jpeg`} boxSize="360px" objectFit="cover" borderRadius="5px" />
         </Box>
       </Flex>
     </>

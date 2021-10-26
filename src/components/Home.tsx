@@ -3,6 +3,7 @@ import { Box, Image, Flex, Heading, Link } from '@chakra-ui/react'
 import { Story } from "./templates/Story";
 import { HeadingJournals } from "./templates/HeadingJournals";
 import { Access } from "./molecules/Access";
+import { OnlineOrder } from "./templates/OnlineOrder";
 
 export const Home: VFC = memo(() => {
   return (
@@ -18,6 +19,8 @@ export const Home: VFC = memo(() => {
       <Box>
         <HeadingJournals />
       </Box>
+
+      <OnlineOrder />
 
       <Access />
 
